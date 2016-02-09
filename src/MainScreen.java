@@ -1,15 +1,12 @@
 import javax.swing.*;
-import javax.swing.JFrame;
 import java.awt.*;
 
 
-public class MainScreen extends JFrame
+public class MainScreen extends FrameScreen
 {
     public MainScreen()
     {
-        setTitle("Theme Test");
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setSize(new Dimension(500,500));
+
         setLayout(new FlowLayout());
         setLocationRelativeTo(null);
         JLabel blackLabel = new JLabel("Black");
@@ -19,9 +16,7 @@ public class MainScreen extends JFrame
         add(blackLabel);
         add(whiteLabel);
         add(greenLabel);
-
-
+        pack();
 
     }
-
 }
