@@ -16,7 +16,7 @@ public class MainScreen extends FrameScreen
         add(blackLabel);
         add(whiteLabel);
         add(greenLabel);
-        pack();
+
 
     }
 }

@@ -1,8 +1,6 @@
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.*;
 public class PostSplashScreen extends JFrame
@@ -14,6 +12,7 @@ public class PostSplashScreen extends JFrame
     because other people will be working on it too.
      */
     private final String IMAGE_STRING = ".idea/resources/splash.png";
+    private final int SPLASH_TIMER = 2000;
 
 
     public PostSplashScreen()
@@ -72,7 +71,7 @@ public class PostSplashScreen extends JFrame
 
 
          */
-        new Timer(4000, e -> {
+        new Timer(SPLASH_TIMER, e -> {
             main.setVisible(true);
             dispose();
         }).start();
