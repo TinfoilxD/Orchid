@@ -1,3 +1,9 @@
+/*
+Written by Tin Van
+
+ */
+
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -21,7 +27,12 @@ public class RootContainer implements FrameScreenController
     }
     private void setScreenReferences()
     {
+
+        JPanel emptyPanel = new JPanel(); //This is to have an empty mainscreen. Otherwise, the first card in stack will display.
         MainScreen mainScreen = new MainScreen();
+
+
+        cardContainer.add(emptyPanel);
         cardContainer.add(mainScreen, MainScreen.SCREEN_TITLE);
     }
 

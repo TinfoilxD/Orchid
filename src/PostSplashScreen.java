@@ -1,8 +1,17 @@
+
+/*
+Written by Tin Van
+
+ */
+
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
+
+
 public class PostSplashScreen extends JFrame
 {
 
@@ -50,6 +59,7 @@ public class PostSplashScreen extends JFrame
 
             /*
             Prints out why the image coudn't be read.
+            This is for debugging purposes only.
              */
             System.out.println(e);
         }
@@ -65,7 +75,6 @@ public class PostSplashScreen extends JFrame
 
 
         /*
-        READ CAREFULLY!!!
         This section will have an automated timer with a 4 second daily. This is to demonstrate splashscreen functionality or it'll simply disappear quickly.
         On production, we will switch the delayed timer with one that fires as soon as main is finished loading.
         We will delete the timer.
@@ -77,7 +86,6 @@ public class PostSplashScreen extends JFrame
             rootContainer.setVisible(true);
             dispose();
         }).start();
-
 
     }
 

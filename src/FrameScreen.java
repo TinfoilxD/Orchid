@@ -1,3 +1,11 @@
+/*
+Written by Tin Van
+
+ */
+
+
+
+
 import javax.swing.*;
 import javax.swing.JFrame;
 import java.awt.event.ActionEvent;
@@ -35,6 +43,10 @@ public class FrameScreen extends JFrame
 
     public FrameScreen(FrameScreenController frameScreenController)
     {
+
+        //Reference containing object to add listeners to the menu buttons
+
+
         this.frameScreenController = frameScreenController;
 
 
@@ -117,6 +129,11 @@ public class FrameScreen extends JFrame
 
     }
 }
+
+/*
+This interface is implemented by the containing object to implement the methods used in the listeners.
+All callback methods go here.
+ */
 
 interface FrameScreenController
 {
