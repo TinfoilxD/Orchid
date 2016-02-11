@@ -61,7 +61,8 @@ public class PostSplashScreen extends JFrame
     }
     public void createMainScreen()
     {
-        MainScreen main = new MainScreen();
+        RootContainer rootContainer = new RootContainer();
+
 
         /*
         READ CAREFULLY!!!
@@ -71,8 +72,9 @@ public class PostSplashScreen extends JFrame
 
 
          */
-        new Timer(SPLASH_TIMER, e -> {
-            main.setVisible(true);
+        new Timer(SPLASH_TIMER, e ->
+        {
+            rootContainer.setVisible(true);
             dispose();
         }).start();
 

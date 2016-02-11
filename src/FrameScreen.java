@@ -1,9 +1,23 @@
 import javax.swing.*;
 import javax.swing.JFrame;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+
+/*
+This is the class which all screens within orchid will extend. This class develops basic functionality of the main and
+intializes frame settings. Note that none of the frames are set to visible. Visibilty is switched by the calling method and not
+by instantiating the object. This is in case we decide to load all frames at once.
+
+ */
 
 public class FrameScreen extends JFrame
 {
+
+    /*
+    All constants go up here for easy edits.
+
+     */
 
     private final String APP_TITLE = "Orchid";
     private final String MENU_1 = "Project";
@@ -16,15 +30,31 @@ public class FrameScreen extends JFrame
     private final String[] MENU4_SUBMENU = {"MENU4_SUBMENU1", "MENU4_SUBMENU2", "MENU4_SUBMENU3"};
 
 
+    private FrameScreenController frameScreenController;
 
-    public FrameScreen()
+
+    public FrameScreen(FrameScreenController frameScreenController)
     {
+        this.frameScreenController = frameScreenController;
+
+
+        /*
+        This section initializes JFrame values to the defaults that will be used by all orchid frames. There might be some
+        exceptions that will be addressed individually.
+
+         */
         setTitle(APP_TITLE);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setSize(700,600);
 
 
+
+        /*
+        The instantiation of the main menu is divided into a tree-like structure.
+        createMainMenu() - > createMenu1() - > createSubMenu()
+
+         */
         createMainMenu();
 
 
@@ -43,12 +73,20 @@ public class FrameScreen extends JFrame
     }
     private JMenu createMenu1()
     {
-        JMenu menuItem1 = new JMenu(MENU_1);
-        menuItem1.add(new JMenuItem(MENU1_SUBMENU[0]));
-        menuItem1.add(new JMenuItem(MENU1_SUBMENU[1]));
-        menuItem1.add(new JMenuItem(MENU1_SUBMENU[2]));
+        JMenu menu1 = new JMenu(MENU_1);
 
-        return menuItem1;
+        JMenuItem menuItem1 = new JMenuItem(MENU1_SUBMENU[0]);
+        menuItem1.addActionListener(e ->
+        {
+
+                frameScreenController.setMenu1Submenu1();
+
+        });
+        menu1.add(menuItem1);
+        menu1.add(new JMenuItem(MENU1_SUBMENU[1]));
+        menu1.add(new JMenuItem(MENU1_SUBMENU[2]));
+
+        return menu1;
 
     }
     private JMenuItem createMenu2()
@@ -78,4 +116,9 @@ public class FrameScreen extends JFrame
         return menuItem4;
 
     }
+}
+
+interface FrameScreenController
+{
+    public void setMenu1Submenu1();
 }

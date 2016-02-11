@@ -2,13 +2,15 @@ import javax.swing.*;
 import java.awt.*;
 
 
-public class MainScreen extends FrameScreen
+public class MainScreen extends JPanel
 {
+
+     public static final String SCREEN_TITLE = "Main Screen";
+
     public MainScreen()
     {
 
         setLayout(new FlowLayout());
-        setLocationRelativeTo(null);
         JLabel blackLabel = new JLabel("Black");
         JLabel whiteLabel = new JLabel("<html><font color='white'>White</font></html>");
         whiteLabel.setForeground(Color.BLACK);
@@ -19,4 +21,6 @@ public class MainScreen extends FrameScreen
 
 
     }
+
+
 }
