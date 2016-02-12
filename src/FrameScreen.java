@@ -1,7 +1,3 @@
-/*
-Written by Tin Van
-
- */
 
 
 
@@ -10,6 +6,11 @@ import javax.swing.*;
 import javax.swing.JFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+/*
+Written by Tin Van.
+
+ */
 
 
 /*

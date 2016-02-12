@@ -1,19 +1,19 @@
-/*
-Written by Tin Van
-
- */
 
 
 import javax.swing.*;
 import java.awt.*;
 
+/*
+Written by Tin Van.
 
-public class MainScreen extends JPanel
+ */
+
+public class TestScreen extends JPanel
 {
 
      public static final String SCREEN_TITLE = "Main Screen";
 
-    public MainScreen()
+    public TestScreen()
     {
 
         setLayout(new FlowLayout());

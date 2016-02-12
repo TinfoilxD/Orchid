@@ -1,11 +1,13 @@
-/*
-Written by Tin Van
-
- */
-
 
 import javax.swing.*;
 import java.awt.*;
+
+
+/*
+Written by Tin Van.
+
+ */
+
 
 public class RootContainer implements FrameScreenController
 {
@@ -28,18 +30,16 @@ public class RootContainer implements FrameScreenController
     private void setScreenReferences()
     {
 
-        JPanel emptyPanel = new JPanel(); //This is to have an empty mainscreen. Otherwise, the first card in stack will display.
-        MainScreen mainScreen = new MainScreen();
 
+        TestScreen testScreen = new TestScreen();
 
-        cardContainer.add(emptyPanel);
-        cardContainer.add(mainScreen, MainScreen.SCREEN_TITLE);
+        cardContainer.add(testScreen, TestScreen.SCREEN_TITLE);
     }
 
     @Override
     public void setMenu1Submenu1()
     {
-        cardLayout.show(cardContainer, MainScreen.SCREEN_TITLE);
+        cardLayout.show(cardContainer, TestScreen.SCREEN_TITLE);
     }
     public void setVisible(boolean b)
     {

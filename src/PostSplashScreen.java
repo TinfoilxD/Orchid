@@ -1,8 +1,4 @@
 
-/*
-Written by Tin Van
-
- */
 
 
 import javax.imageio.ImageIO;
@@ -10,6 +6,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
+
+/*
+Written by Tin Van.
+
+ */
 
 
 public class PostSplashScreen extends JFrame
@@ -89,8 +90,11 @@ public class PostSplashScreen extends JFrame
 
     }
 
+
     public static void main(String args[])
     {
         new PostSplashScreen();
     }
+
+
 }
