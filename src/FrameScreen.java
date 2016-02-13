@@ -30,11 +30,11 @@ public class FrameScreen extends JFrame
 
     private final String APP_TITLE = "Orchid";
     private final String MENU_1 = "Project";
-    private final String MENU_2 = "Test String 2";
+    private final String MENU_2 = "Client";
     private final String MENU_3 = "Test String 3";
     private final String MENU_4 = "Test String 4";
     private final String[] MENU1_SUBMENU = {"New Project", "Open Project", "Manage Project"};
-    private final String[] MENU2_SUBMENU = {"MENU2_SUBMENU1", "MENU2_SUBMENU2", "MENU2_SUBMENU3"};
+    private final String[] MENU2_SUBMENU = {"New Client", "MENU2_SUBMENU2", "MENU2_SUBMENU3"};
     private final String[] MENU3_SUBMENU = {"MENU3_SUBMENU1", "MENU3_SUBMENU2", "MENU3_SUBMENU3"};
     private final String[] MENU4_SUBMENU = {"MENU4_SUBMENU1", "MENU4_SUBMENU2", "MENU4_SUBMENU3"};
 
