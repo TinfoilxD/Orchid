@@ -30,11 +30,11 @@ public class FrameScreen extends JFrame
 
     private final String APP_TITLE = "Orchid";
     private final String MENU_1 = "Project";
-    private final String MENU_2 = "Test String 2";
+    private final String MENU_2 = "Manage";
     private final String MENU_3 = "Test String 3";
     private final String MENU_4 = "Test String 4";
     private final String[] MENU1_SUBMENU = {"New Project", "Open Project", "Manage Project"};
-    private final String[] MENU2_SUBMENU = {"MENU2_SUBMENU1", "MENU2_SUBMENU2", "MENU2_SUBMENU3"};
+    private final String[] MENU2_SUBMENU = {"Department", "Employee", "MENU2_SUBMENU3"};
     private final String[] MENU3_SUBMENU = {"MENU3_SUBMENU1", "MENU3_SUBMENU2", "MENU3_SUBMENU3"};
     private final String[] MENU4_SUBMENU = {"MENU4_SUBMENU1", "MENU4_SUBMENU2", "MENU4_SUBMENU3"};
 
@@ -99,16 +99,31 @@ public class FrameScreen extends JFrame
         menu1.add(new JMenuItem(MENU1_SUBMENU[1]));
         menu1.add(new JMenuItem(MENU1_SUBMENU[2]));
 
+
         return menu1;
 
     }
     private JMenuItem createMenu2()
     {
-        JMenu menuItem2 = new JMenu(MENU_2);
-        menuItem2.add(new JMenuItem(MENU2_SUBMENU[0]));
-        menuItem2.add(new JMenuItem(MENU2_SUBMENU[1]));
-        menuItem2.add(new JMenuItem(MENU2_SUBMENU[2]));
-        return menuItem2;
+        JMenu menu2 = new JMenu(MENU_2);
+        JMenuItem menuItem1 = new JMenuItem(MENU2_SUBMENU[0]);
+        menuItem1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frameScreenController.setMenu2Submenu1();
+            }
+        });
+        menu2.add(menuItem1);
+        JMenuItem menuItem2 = new JMenuItem(MENU2_SUBMENU[1]);
+        menuItem2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frameScreenController.setMenu2Submenu2();
+            }
+        });
+        menu2.add(menuItem2);
+        menu2.add(new JMenuItem(MENU2_SUBMENU[2]));
+        return menu2;
 
     }
     private JMenu createMenu3()
@@ -139,4 +154,7 @@ All callback methods go here.
 interface FrameScreenController
 {
     public void setMenu1Submenu1();
+    public void setMenu2Submenu1();
+    public void setMenu2Submenu2();
+
 }

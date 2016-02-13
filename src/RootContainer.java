@@ -32,8 +32,12 @@ public class RootContainer implements FrameScreenController
 
 
         TestScreen testScreen = new TestScreen();
+        NewDepartmentForm newDepartmentForm = new NewDepartmentForm();
+        NewEmployeeForm newEmployeeForm = new NewEmployeeForm();
 
         cardContainer.add(testScreen, TestScreen.SCREEN_TITLE);
+        cardContainer.add(newDepartmentForm, NewDepartmentForm.SCREEN_TITLE);
+        cardContainer.add(newEmployeeForm, NewEmployeeForm.SCREEN_TITLE);
     }
 
     @Override
@@ -41,6 +45,8 @@ public class RootContainer implements FrameScreenController
     {
         cardLayout.show(cardContainer, TestScreen.SCREEN_TITLE);
     }
+    public void setMenu2Submenu1(){cardLayout.show(cardContainer, NewDepartmentForm.SCREEN_TITLE);};
+    public void setMenu2Submenu2(){cardLayout.show(cardContainer, NewEmployeeForm.SCREEN_TITLE);}
     public void setVisible(boolean b)
     {
         frame.setVisible(b);
