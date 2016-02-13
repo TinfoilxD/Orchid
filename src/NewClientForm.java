@@ -14,29 +14,29 @@ public class NewClientForm extends JPanel
     ClientID	autonumber
     ClientFirstName	varchar
     ClientLastName	varchar
-    ClientAddress1	varchar
-    ClientAddress2	varchar
-    ClientCity	varchar
-    ClientCounty	varchar
-    ClientState	varchar
-    ClientZipCode	varchar
-    ClientPhone	varchar
-    ClientExtension	varchar
-    ClientEmail	varchar
+    fieldClientAddress1	varchar
+    fieldClientAddress2	varchar
+    fieldClientCity	varchar
+    fieldClientCounty	varchar
+    comboBoxClientState	varchar
+    fieldClientZipCode	varchar
+    fieldClientPhone	varchar
+    fieldClientExtension	varchar
+    fieldClientEmail	varchar
     IsDeleted	bit
         */
 
-    private JTextField clientFirstName;
-    private JTextField clientLastName;
-    private JTextField clientAddress1;
-    private JTextField clientAddress2;
-    private JTextField clientCity;
-    private JTextField clientCounty;
-    private JComboBox<String> clientState;
-    private JTextField clientZipCode;
-    private JTextField clientPhone;
-    private JTextField clientExtension;
-    private JTextField clientEmail;
+    private JTextField fieldClientFirstName;
+    private JTextField fieldClientLastName;
+    private JTextField fieldClientAddress1;
+    private JTextField fieldClientAddress2;
+    private JTextField fieldClientCity;
+    private JTextField fieldClientCounty;
+    private JComboBox<String> comboBoxClientState;
+    private JTextField fieldClientZipCode;
+    private JTextField fieldClientPhone;
+    private JTextField fieldClientExtension;
+    private JTextField fieldClientEmail;
 
     public NewClientForm()
     {
@@ -49,32 +49,32 @@ public class NewClientForm extends JPanel
 
         //intialize
 
-        clientFirstName = new JTextField(30);
-        clientLastName = new JTextField(30);
-        clientAddress1 = new JTextField(30);
-        clientAddress2 = new JTextField(30);
-        clientCity = new JTextField(30);
-        clientCounty = new JTextField(30);
-        clientState = new JComboBox<String>();
-        clientState.setEditable(false);
-        clientZipCode = new JTextField(30);
-        clientPhone = new JTextField(30);
-        clientExtension = new JTextField(30);
-        clientEmail = new JTextField(30);
+        fieldClientFirstName = new JTextField(30);
+        fieldClientLastName = new JTextField(30);
+        fieldClientAddress1 = new JTextField(30);
+        fieldClientAddress2 = new JTextField(30);
+        fieldClientCity = new JTextField(30);
+        fieldClientCounty = new JTextField(30);
+        comboBoxClientState = new JComboBox<String>();
+        comboBoxClientState.setEditable(false);
+        fieldClientZipCode = new JTextField(30);
+        fieldClientPhone = new JTextField(30);
+        fieldClientExtension = new JTextField(30);
+        fieldClientEmail = new JTextField(30);
 
         //add to panel
 
-        add(clientFirstName);
-        add(clientLastName);
-        add(clientAddress1);
-        add(clientAddress2);
-        add(clientCity);
-        add(clientCounty);
-        add(clientState);
-        add(clientZipCode);
-        add(clientPhone);
-        add(clientExtension);
-        add(clientEmail);
+        add(fieldClientFirstName);
+        add(fieldClientLastName);
+        add(fieldClientAddress1);
+        add(fieldClientAddress2);
+        add(fieldClientCity);
+        add(fieldClientCounty);
+        add(comboBoxClientState);
+        add(fieldClientZipCode);
+        add(fieldClientPhone);
+        add(fieldClientExtension);
+        add(fieldClientEmail);
     }
 
 }
